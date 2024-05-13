@@ -21,5 +21,7 @@ public class CustomerNotificationConstants {
 
     public static final Integer BUFFER_SIZE = 2;
 
+    public static final String TOPIC_NAME = "customer.profiles";
+
 
 }

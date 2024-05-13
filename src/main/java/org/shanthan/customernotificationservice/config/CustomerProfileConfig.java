@@ -29,18 +29,6 @@ public class CustomerProfileConfig {
     @Value("${spring.kafka.bootstrap-servers}")
     private String bootstrapServers;
 
-    @Value("${spring.kafka.consumer.group-id}")
-    private String groupId;
-
-
-    @Value("${spring.kafka.topic.name}")
-    private String topicName;
-
-    @Bean
-    public String topic() {
-        return topicName;
-    }
-
     @Bean
     public List<CustomerProfileEntity> customerProfileEntityBuffer() {
         return new ArrayList<>();
