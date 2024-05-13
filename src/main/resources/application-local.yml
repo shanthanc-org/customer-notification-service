@@ -1,0 +1,37 @@
+spring:
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    out-of-order: false
+  datasource:
+    url: jdbc:postgresql://localhost:5434/new_customer
+    username: admin
+    password: pass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+  kafka:
+    producer:
+      acks: all
+      retries: 5
+      delivery-timeout: 120000
+      request-timeout: 30000
+      idempotence: true
+      max-request-size: 1048576
+      batch-size: 16384
+      linger-time: 20
+    consumer:
+      group-id: new-customer
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      max-poll-records: 500
+      session-timeout: 15000
+      heartbeat-interval: 5000
+      max-partition-bytes: 1048576
+      fetch-min-size: 1
+      fetch-max-wait: 500
+    bootstrap-servers: localhost:9093

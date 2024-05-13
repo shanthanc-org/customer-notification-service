@@ -1,0 +1,39 @@
+{
+  "namespace": "org.shanthan.customerprofile.avro",
+  "type": "record",
+  "name": "CustomerProfile",
+  "fields": [
+    {
+      "name": "accountKey",
+      "type": "string"
+    },
+    {
+      "name": "accountNum",
+      "type": "string"
+    },
+    {
+      "name": "firstName",
+      "type": "string"
+    },
+    {
+      "name": "lastName",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "name": "email",
+      "type": "string"
+    },
+    {
+      "name": "phoneNumber",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": "string"
+    }
+  ]
+}
